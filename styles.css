@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, Verdana, sans-serif;
+    
+}
+
+body{
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(Images/bg1.jpg);
+    background-repeat: repeat;
+}
+
+.container{
+    width: 50vw;
+    height: 50vh;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px 3px #ce6464;
+    background-color: rgb(236, 159, 159);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    padding-bottom: 20px;
+    min-width: 500px;
+}
+.stopwatch-text{
+    display: grid;
+    place-items: center;
+    color: #000000;
+}
+
+.stopwatch-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.stopwatch-buttons button{
+    box-sizing: border-box;
+    padding: 20px;
+    margin-inline: 10px;
+    border-radius: 25px;
+    border: 3px solid #efd8d2;
+    background-color: #862e3d7a;
+    color: rgb(255, 250, 250);
+    font-weight: bolder;
+    cursor: pointer;
+    border-style: dashed;
+    transition: 0.5s;
+}
+
+.stopwatch-buttons button:hover{
+    background-color: #fff8f8;
+    border: 3px solid #010101;
+    color: #0b0a0a;
+    border-radius: 25px;
+    transform: scale(1.1);
+}
+
+.lap-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    color: #000000;
+}
+
+.lap-list::-webkit-scrollbar{
+    display: none;
+}
+
+.lap-list ol{
+    list-style-type: decimal;
+    width: 50%;
+    text-align: center;
+}
+
+.lap-list ol li{
+    padding-block: 7px;
+    border-bottom:  rgb(236, 159, 159);;
+
+    font-weight: bold;
+}
